@@ -30,6 +30,15 @@
     <ClCompile Include="find.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="count.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="print.h">
@@ -42,6 +51,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="find.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="count.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unique.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reverse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -139,17 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="count.cpp" />
     <ClCompile Include="find.cpp" />
     <ClCompile Include="largest.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="print.cpp" />
+    <ClCompile Include="reverse.cpp" />
     <ClCompile Include="sumcpp.cpp" />
+    <ClCompile Include="unique.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="count.h" />
     <ClInclude Include="find.h" />
     <ClInclude Include="largest.h" />
     <ClInclude Include="print.h" />
+    <ClInclude Include="reverse.h" />
     <ClInclude Include="sum.h" />
+    <ClInclude Include="unique.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
