@@ -63,30 +63,73 @@ int iLoveNumbers()
 		std::cout << "Number " << i+1 << ": " << dynArr[i] << std::endl;
 	}
 
+
 	return 0;
+}
+
+int *duplicateArray(int *origArray, size_t size)
+{
+	int *retArray = new int[size];
+	for(int i = 0; i < size; i++)
+	{
+		retArray[i] = origArray[i];
+	}
+	return retArray;
+}
+
+int *subArray (int *arr, int start, int size)
+{
+	int arrValue = 0;
+	int *newArr = new int[size];
+	for(int i = start; i < (start + size); i++)
+	{
+		newArr[i] = arr[i];
+		arrValue++;
+		std::cout << newArr[i] << std::endl;
+	}
+	return newArr;
 }
 
 int main()
 {
+	std::cout << "Print Array" << std::endl;
 	float printArr[] = { 5.6f, 6.7f, 7.f };
-	printFloats(printArr, 3); 
+	printFloats(printArr, 3);
+	std::cout << std::endl;
 
+	std::cout << "Sum Array" << std::endl;
 	int sumArr[] = { 12, 8, 13 };
 	arraySum(sumArr, 3);
+	std::cout << std::endl;
 
+	// Doesn't print anything, so not putting an std::cout here
 	bool initArr[5] = {};
 	initBools(initArr, 5, true);
 
-	int* zArray = zeroArray(15);
-	for(int i = 0; i < 15; i++)
+	std::cout << "Zero Array" << std::endl;
+	int *zArray = zeroArray(5);
+	for(int i = 0; i < 5; i++)
 	{
 		std::cout << zArray[i] << std::endl;
 	}
-	delete[] zArray;
+	std::cout << std::endl;
 
+	std::cout << "Print Subarray" << std::endl;
+	int subArr[] = { 2, 4, 6, 8, 10};
+	subArray(subArr, 2, 2);
+	std::cout << std::endl;
+
+	std::cout << "I Love Numbers" << std::endl;
 	iLoveNumbers();
 
+	int *zDupArray = duplicateArray(zArray, 15);
+	delete[] zDupArray;
+
+	delete[] zArray;
+
 	return 0;
+
+
 	//int numberA = 5;
 	//int * pointerToNumberA = &numberA;
 
