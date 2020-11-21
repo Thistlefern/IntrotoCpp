@@ -14,21 +14,26 @@ int ticTacToe()
 	char ticTacToeBoard[9] = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
 
 	bool playerOne = true;
+	int winner = 0;
 
-	cout << "-------------------- Tic-Tac-Toe --------------------" << endl;
+	// This array keeps track of the sums of the rows, columns, and diagonals, for easier logic checking
+	//						  |  row   | column |diag|
+	int ticTacToeWinner[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+
+	cout << "-------------------- Tic-Tac-Toe -------------------" << endl;
+	// Printing the board
+	cout << endl;
+	cout << " " << ticTacToeBoard[0] << " | " << ticTacToeBoard[3] << " | " << ticTacToeBoard[6] << " " << endl;
+	cout << "-----------" << endl;
+	cout << " " << ticTacToeBoard[1] << " | " << ticTacToeBoard[4] << " | " << ticTacToeBoard[7] << " " << endl;
+	cout << "-----------" << endl;
+	cout << " " << ticTacToeBoard[2] << " | " << ticTacToeBoard[5] << " | " << ticTacToeBoard[8] << " " << endl;
+	cout << endl;
 
 	while (isTTTRunning == true)
 	{
-		// Printing the board
-		cout << endl;
-		cout << " " << ticTacToeBoard[0] << " | " << ticTacToeBoard[3] << " | " << ticTacToeBoard[6] << " " << endl;
-		cout << "-----------" << endl;
-		cout << " " << ticTacToeBoard[1] << " | " << ticTacToeBoard[4] << " | " << ticTacToeBoard[7] << " " << endl;
-		cout << "-----------" << endl;
-		cout << " " << ticTacToeBoard[2] << " | " << ticTacToeBoard[5] << " | " << ticTacToeBoard[8] << " " << endl;
-		cout << endl;
-
-
+		// the check for a tie game is in the game loop because at the end of each game loop, it is added to, and once it hits the number 9, the game ends
+		int tieGame = 0;
 
 		// Player One's turn
 		if (playerOne == true)
@@ -51,6 +56,9 @@ int ticTacToe()
 					if (ticTacToeBoard[0] == ' ')
 					{
 						ticTacToeBoard[0] = 'X';
+						ticTacToeWinner[0]++;
+						ticTacToeWinner[3]++;
+						ticTacToeWinner[6]++;
 						playerOne = false;
 					}
 					else
@@ -64,6 +72,8 @@ int ticTacToe()
 					if (ticTacToeBoard[3] == ' ')
 					{
 						ticTacToeBoard[3] = 'X';
+						ticTacToeWinner[0]++;
+						ticTacToeWinner[4]++;
 						playerOne = false;
 					}
 					else
@@ -77,6 +87,9 @@ int ticTacToe()
 					if (ticTacToeBoard[6] == ' ')
 					{
 						ticTacToeBoard[6] = 'X';
+						ticTacToeWinner[0]++;
+						ticTacToeWinner[5]++;
+						ticTacToeWinner[7]++;
 						playerOne = false;
 					}
 					else
@@ -94,6 +107,8 @@ int ticTacToe()
 					if (ticTacToeBoard[1] == ' ')
 					{
 						ticTacToeBoard[1] = 'X';
+						ticTacToeWinner[1]++;
+						ticTacToeWinner[3]++;
 						playerOne = false;
 					}
 					else
@@ -107,6 +122,10 @@ int ticTacToe()
 					if (ticTacToeBoard[4] == ' ')
 					{
 						ticTacToeBoard[4] = 'X';
+						ticTacToeWinner[1]++;
+						ticTacToeWinner[4]++;
+						ticTacToeWinner[6]++;
+						ticTacToeWinner[7]++;
 						playerOne = false;
 					}
 					else
@@ -120,6 +139,8 @@ int ticTacToe()
 					if (ticTacToeBoard[7] == ' ')
 					{
 						ticTacToeBoard[7] = 'X';
+						ticTacToeWinner[1]++;
+						ticTacToeWinner[5]++;
 						playerOne = false;
 					}
 					else
@@ -137,6 +158,9 @@ int ticTacToe()
 					if (ticTacToeBoard[2] == ' ')
 					{
 						ticTacToeBoard[2] = 'X';
+						ticTacToeWinner[2]++;
+						ticTacToeWinner[3]++;
+						ticTacToeWinner[7]++;
 						playerOne = false;
 					}
 					else
@@ -150,6 +174,8 @@ int ticTacToe()
 					if (ticTacToeBoard[5] == ' ')
 					{
 						ticTacToeBoard[5] = 'X';
+						ticTacToeWinner[2]++;
+						ticTacToeWinner[4]++;
 						playerOne = false;
 					}
 					else
@@ -163,6 +189,9 @@ int ticTacToe()
 					if (ticTacToeBoard[8] == ' ')
 					{
 						ticTacToeBoard[8] = 'X';
+						ticTacToeWinner[2]++;
+						ticTacToeWinner[5]++;
+						ticTacToeWinner[6]++;
 						playerOne = false;
 					}
 					else
@@ -193,6 +222,9 @@ int ticTacToe()
 					if (ticTacToeBoard[0] == ' ')
 					{
 						ticTacToeBoard[0] = 'O';
+						ticTacToeWinner[0]--;
+						ticTacToeWinner[3]--;
+						ticTacToeWinner[6]--;
 						playerOne = true;
 					}
 					else
@@ -206,6 +238,8 @@ int ticTacToe()
 					if (ticTacToeBoard[3] == ' ')
 					{
 						ticTacToeBoard[3] = 'O';
+						ticTacToeWinner[0]--;
+						ticTacToeWinner[4]--;
 						playerOne = true;
 					}
 					else
@@ -219,6 +253,9 @@ int ticTacToe()
 					if (ticTacToeBoard[6] == ' ')
 					{
 						ticTacToeBoard[6] = 'O';
+						ticTacToeWinner[0]--;
+						ticTacToeWinner[5]--;
+						ticTacToeWinner[7]--;
 						playerOne = true;
 					}
 					else
@@ -236,6 +273,8 @@ int ticTacToe()
 					if (ticTacToeBoard[1] == ' ')
 					{
 						ticTacToeBoard[1] = 'O';
+						ticTacToeWinner[1]--;
+						ticTacToeWinner[3]--;
 						playerOne = true;
 					}
 					else
@@ -249,6 +288,10 @@ int ticTacToe()
 					if (ticTacToeBoard[4] == ' ')
 					{
 						ticTacToeBoard[4] = 'O';
+						ticTacToeWinner[1]--;
+						ticTacToeWinner[4]--;
+						ticTacToeWinner[6]--;
+						ticTacToeWinner[7]--;
 						playerOne = true;
 					}
 					else
@@ -262,6 +305,8 @@ int ticTacToe()
 					if (ticTacToeBoard[7] == ' ')
 					{
 						ticTacToeBoard[7] = 'O';
+						ticTacToeWinner[1]--;
+						ticTacToeWinner[5]--;
 						playerOne = true;
 					}
 					else
@@ -279,6 +324,9 @@ int ticTacToe()
 					if (ticTacToeBoard[2] == ' ')
 					{
 						ticTacToeBoard[2] = 'O';
+						ticTacToeWinner[2]--;
+						ticTacToeWinner[3]--;
+						ticTacToeWinner[7]--;
 						playerOne = true;
 					}
 					else
@@ -292,6 +340,8 @@ int ticTacToe()
 					if (ticTacToeBoard[5] == ' ')
 					{
 						ticTacToeBoard[5] = 'O';
+						ticTacToeWinner[2]--;
+						ticTacToeWinner[4]--;
 						playerOne = true;
 					}
 					else
@@ -305,6 +355,9 @@ int ticTacToe()
 					if (ticTacToeBoard[8] == ' ')
 					{
 						ticTacToeBoard[8] = 'O';
+						ticTacToeWinner[2]--;
+						ticTacToeWinner[5]--;
+						ticTacToeWinner[6]--;
 						playerOne = true;
 					}
 					else
@@ -314,9 +367,58 @@ int ticTacToe()
 					}
 				}
 			}
-			//isTTTRunning = false;*/
+		}
+		// Printing the board again
+		cout << endl;
+		cout << " " << ticTacToeBoard[0] << " | " << ticTacToeBoard[3] << " | " << ticTacToeBoard[6] << " " << endl;
+		cout << "-----------" << endl;
+		cout << " " << ticTacToeBoard[1] << " | " << ticTacToeBoard[4] << " | " << ticTacToeBoard[7] << " " << endl;
+		cout << "-----------" << endl;
+		cout << " " << ticTacToeBoard[2] << " | " << ticTacToeBoard[5] << " | " << ticTacToeBoard[8] << " " << endl;
+		cout << endl;
+
+		// loop to check for a tie
+		for (int i = 0; i < 9; i++)
+		{
+			if(ticTacToeBoard[i] != ' ')
+			{
+				tieGame++;
+			}
 		}
 
-		return 0;
+		// loop to check for a winner
+		for(int i = 0; i < 8; i++)
+		{
+			if(ticTacToeWinner[i] == 3)
+			{
+				winner++;
+			}
+
+			if (ticTacToeWinner[i] == -3)
+			{
+				winner--;
+			}
+		}
+
+		if(tieGame == 9)
+		{
+			cout << "*** It's a tie! ***" << endl;
+			cout << "Did you know that a tied Tic-Tac-Toe game is sometimes calle a cat's game?" << endl;
+			cout << "Here's a cat for you, as a consolation prize for neither of you winning!" << endl;
+			cout << "=^.^=" << endl;
+			isTTTRunning = false;
+		}
+		else if(winner == 1)
+		{
+			cout << "*** Player 1 wins! ***" << endl;
+			isTTTRunning = false;
+		}
+		else if(winner == -1)
+		{
+			cout << "*** Player 2 wins! ***" << endl;
+			isTTTRunning = false;
+		}
 	}
+	cout << "\nThanks for playing!" << endl;
+	return 0;
 }
