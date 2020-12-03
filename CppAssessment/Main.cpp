@@ -1,5 +1,6 @@
 #include <iostream>
 #include "tictactoe.h"
+#include "numbers.h"
 
 using std::cout;
 using std::endl;
@@ -30,6 +31,7 @@ int main()
 				ticTacToe();
 				break;
 			case '2':
+				numberGuess();
 				break;
 			case '3':
 				break;

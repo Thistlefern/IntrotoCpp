@@ -1,6 +1,5 @@
 #include <iostream>
 #include "tictactoe.h"
-#include <string.h>
 
 using std::cout;
 using std::endl;
@@ -420,5 +419,7 @@ int ticTacToe()
 		}
 	}
 	cout << "\nThanks for playing!" << endl;
+	cout << endl;
+	// TODO ask if they want to play another game
 	return 0;
 }

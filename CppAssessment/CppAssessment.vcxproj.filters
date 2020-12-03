@@ -24,9 +24,15 @@
     <ClCompile Include="arena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numbers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tictactoe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="numbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
