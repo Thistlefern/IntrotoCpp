@@ -398,7 +398,7 @@ int ticTacToe()
 				winner--;
 			}
 		}
-
+		// if the game is a tie
 		if(tieGame == 9)
 		{
 			cout << "*** It's a tie! ***" << endl;

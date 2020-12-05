@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppAssessment", "CppAssessm
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Debugging Exercise", "..\..\..\OneDrive\Documents\AIE\debugExerciseProject\Debugging Exercise\Debugging Exercise.vcxproj", "{E6FADF32-9DA5-4E49-85D3-5FF2044566A2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryExercisesAssessment", "BinaryExercisesAssessment\BinaryExercisesAssessment.vcxproj", "{578E6AB5-F927-4690-ADB5-4D597F1BBA97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{E6FADF32-9DA5-4E49-85D3-5FF2044566A2}.Release|x64.Build.0 = Release|x64
 		{E6FADF32-9DA5-4E49-85D3-5FF2044566A2}.Release|x86.ActiveCfg = Release|Win32
 		{E6FADF32-9DA5-4E49-85D3-5FF2044566A2}.Release|x86.Build.0 = Release|Win32
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Debug|x64.ActiveCfg = Debug|x64
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Debug|x64.Build.0 = Debug|x64
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Debug|x86.ActiveCfg = Debug|Win32
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Debug|x86.Build.0 = Debug|Win32
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Release|x64.ActiveCfg = Release|x64
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Release|x64.Build.0 = Release|x64
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Release|x86.ActiveCfg = Release|Win32
+		{578E6AB5-F927-4690-ADB5-4D597F1BBA97}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
