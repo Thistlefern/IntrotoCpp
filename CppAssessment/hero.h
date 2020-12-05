@@ -5,6 +5,7 @@ public:
 	Hero();
 
 	bool isAlive = true;
+	int count = 0;
 	const char* name = "Name";
 	const char* title = "title";
 	int health = 50;

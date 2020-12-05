@@ -16,8 +16,11 @@ int main()
 	
 	while (playGamesForever == true)
 	{
-		// the input to choose your game
+		// input to choose your game
 		char input = ' ';
+
+		// input to play again after a game is done
+		char playAgain = ' ';
 
 		cout << "Which game would you like to play?" << endl;
 		cout << "1: Tic-Tac-Toe" << endl;
@@ -30,12 +33,36 @@ int main()
 		{
 			case '1':
 				ticTacToe();
+				cout << endl;
+				cout << "Play another game? (y/n)" << endl;
+				cin >> playAgain;
+				if(playAgain == 'n')
+				{
+					playGamesForever = false;
+				}
+				cout << endl;
 				break;
 			case '2':
 				numberGuess();
+				cout << endl;
+				cout << "Play another game? (y/n)" << endl;
+				cin >> playAgain;
+				if (playAgain == 'n')
+				{
+					playGamesForever = false;
+				}
+				cout << endl;
 				break;
 			case '3':
 				arena();
+				cout << endl;
+				cout << "Play another game? (y/n)" << endl;
+				cin >> playAgain;
+				if (playAgain == 'n')
+				{
+					playGamesForever = false;
+				}
+				cout << endl;
 				break;
 			case '4':
 				playGamesForever = false;

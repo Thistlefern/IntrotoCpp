@@ -419,7 +419,5 @@ int ticTacToe()
 		}
 	}
 	cout << "\nThanks for playing!" << endl;
-	cout << endl;
-	// TODO ask if they want to play another game
 	return 0;
 }

@@ -45,7 +45,6 @@ int numberGuess()
 		if(input == '2')
 		{
 			cout << "Hooray, I got it! Thanks for playing!" << endl;
-			cout << endl;
 			isNumbersRunning = false;
 		}
 		else if(input == '1')
@@ -64,6 +63,5 @@ int numberGuess()
 			cout << "That isn't a recognized answer, please try again." << endl;
 		}
 	}
-	// TODO ask if they want to play another game
 	return 0;
 }
