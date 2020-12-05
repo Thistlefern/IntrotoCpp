@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tictactoe.h"
 #include "numbers.h"
+#include "arena.h"
 
 using std::cout;
 using std::endl;
@@ -34,6 +35,7 @@ int main()
 				numberGuess();
 				break;
 			case '3':
+				arena();
 				break;
 			case '4':
 				playGamesForever = false;

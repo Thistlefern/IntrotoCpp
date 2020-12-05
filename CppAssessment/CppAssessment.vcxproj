@@ -140,11 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="arena.cpp" />
+    <ClCompile Include="hero.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="numbers.cpp" />
     <ClCompile Include="tictactoe.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="arena.h" />
+    <ClInclude Include="hero.h" />
     <ClInclude Include="numbers.h" />
     <ClInclude Include="tictactoe.h" />
   </ItemGroup>
